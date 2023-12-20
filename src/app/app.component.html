@@ -1,0 +1,58 @@
+<h1 class="display-6">Gender pipe</h1>
+<br>
+<table class="container table table-dark">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let D of details">
+            <td>{{D.id}}</td>
+            <td>{{D.name | gender :D.gender}}</td>
+            <td>{{D.gender}}</td>
+            <td>{{D.city}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<h1 class="display-6">Square pipe</h1>
+<br>
+<table class="container table table-info">
+    <thead >
+        <tr>
+            <th>Number</th>
+            <th>Square</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Number of NUM">
+            <td>{{Number}}</td>
+            <td>{{Number | square : Number}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<h1 class="display-6">Circle pipe</h1>
+<br>
+<table class="container table table-danger">
+    <thead>
+        <tr>
+            <td>Radius of Circle (in mm)</td>
+            <td>Area of Circle</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let radi of radius">
+            <td>{{radi}}</td>
+            <td>{{radi | circleArea : radi }} mm<sup>2</sup></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<hr>
+<br>
